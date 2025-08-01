@@ -14,7 +14,7 @@ AOS.init();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter> {/* ⬅️ wrap everything */}
+    <BrowserRouter basename="/accl-lab-website"> {/* ⬅️ wrap everything */}
       <App />
     </BrowserRouter>
   </React.StrictMode>
