@@ -2,10 +2,10 @@
 
 import vishweshImage from '../assets/images/team/VishweshJatala.jpg';
 import kishanimage from '../assets/images/team/kishan.jpg';
-import niharikaimage from '../assets/images/team/Niharika nayak.jpg';
+import niharikaimage from '../assets/images/team/Niharikanayak.jpg';
 import surendraimage from '../assets/images/team/surendrakumar.jpg';
 import rupamimage from '../assets/images/team/RUPAMROY.jpg';
-import aniketimage from '../assets/images/team/ANIKET MITTAL.jpg';
+import aniketimage from '../assets/images/team/ANIKETMITTAL.jpg';
 import gobardhanimage from '../assets/images/team/GOBARDHANMEHER.jpg';
 import shrashankimage from '../assets/images/team/SHRASHANKMARAVI.jpg';
 import vishalImage from '../assets/images/team/vishal.jpg';
