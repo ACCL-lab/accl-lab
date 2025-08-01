@@ -6,7 +6,12 @@ import react from '@vitejs/plugin-react'
 //   plugins: [react()],
 // })
 //
-export default {
-  base: '/accl-lab-website/', // <- Add this line
-  // plugins: [react()],
-}
+// export default {
+//   base: '/accl-lab-website/', // <- Add this line
+//   // plugins: [react()],
+// }
+
+export default defineConfig({
+  base: '/accl-lab-website/',  // 👈 ADD THIS LINE
+  plugins: [react()],
+})
