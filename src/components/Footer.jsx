@@ -14,13 +14,11 @@ export default function Footer({ handleOpen }) {
               Department of CSE <br />
               Engineering Building-1<br />
               IIT BHILAI, 
-              Kutelabhata, Durg, Chhattisgarh - 491001
+              Kutelabhata, Durg, Chhattisgarh - 491002
             </p>
             <p>
               <FaEnvelope className="me-2 text-danger" />
               <span>vishwesh@iitbhilai.ac.in</span><br />
-              // <FaPhoneAlt className="me-2 text-danger mt-2" />
-              // <span>+91-771-1234567</span>
             </p>
           </div>
 
