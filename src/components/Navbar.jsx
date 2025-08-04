@@ -37,7 +37,7 @@ const Navbar = () => {
 
   // Navigation links with active class
   const navLinks = [
-    { name: 'Home', id: 'home' },
+    { name: 'Home', id: 'hero' },
     { name: 'About', id: 'about-section' },
     { name: 'News', id: 'news-section' },
     { name: 'Research', id: 'research-section' },
