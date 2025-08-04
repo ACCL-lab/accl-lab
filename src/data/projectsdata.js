@@ -42,7 +42,7 @@ const projects = [
     shortDesc: "Rolling process at Bar and Rod Mill (BRM) is a continuous process where the same...",
     image: imag2,
     status: "Ongoing",
-    funding: "Funding: 299 Lakh",
+    funding: "Funding: 3 Cr",
     date: "Jan 2024 - Present",
     report: "#",
     // ✅ funding  Section

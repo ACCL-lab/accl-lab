@@ -79,6 +79,14 @@ export default function Footer({ handleOpen }) {
           >
             A Vishal
           </a>
+            &  
+          <a
+            href="https://www.linkedin.com/in/kishan-tamboli-ab5b151a7" 
+            className="text-white text-decoration-underline mx-1"
+            target="_blank" rel="noreferrer"
+          >
+            Kishan Tamboli
+          </a>
           | Maintained by ACCL Lab Team
           </p>
         </div>
