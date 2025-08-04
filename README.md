@@ -1,12 +1,97 @@
-# React + Vite
+# ACCL Lab Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official website of the **ACCL Lab** at IIT Bhilai!  
+This repository contains the source code for our lab's public website, built using [React](https://reactjs.org/) and [Vite](https://vitejs.dev/).
 
-Currently, two official plugins are available:
+🌐 **Live Website**: [https://accl-lab.github.io/accl-lab/](https://accl-lab.github.io/accl-lab/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ Built with React and Vite for fast performance
+- 📱 Responsive design (Bootstrap)
+- 🎨 Animations with AOS
+- 🧭 React Router-based navigation
+
+---
+
+## 📁 Project Structure
+
+```
+
+accl-lab/
+├── public/               # Static assets
+├── src/
+│   ├── assets/           # Images and icons
+│   ├── components/       # Reusable components
+│   ├── pages/            # Website pages
+│   ├── styles/           # CSS
+│   └── App.jsx           # Main app
+├── index.html
+└── package.json
+
+````
+
+---
+
+## 🛠️ Installation & Development
+
+```bash
+# Clone the repo
+git clone https://github.com/ACCL-lab/accl-lab.git
+cd accl-lab
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+````
+
+---
+
+## 🏗️ Build for Deployment
+
+```bash
+npm run build
+```
+
+The generated `dist/` folder contains static files that can be hosted.
+
+---
+
+## 🚀 Deploy to GitHub Pages
+
+This site is deployed using **GitHub Actions** to the `gh-pages` branch.
+
+1. Push code to `main`
+2. GitHub Actions will automatically build and deploy
+3. The site will be available at [https://accl-lab.github.io/accl-lab/](https://accl-lab.github.io/accl-lab/)
+
+If needed, update the `vite.config.js` with the correct `base`:
+
+```js
+export default defineConfig({
+  base: "/accl-lab/",
+  plugins: [react()],
+});
+```
+
+---
+
+## 🧪 Feedback
+
+We welcome your feedback!
+Feel free to raise issues or suggestions in the [Issues](https://github.com/ACCL-lab/accl-lab/issues) section.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+See the [LICENSE](./LICENSE) file for more details.
+
+---
+
+© ACCL Lab, IIT Bhilai
