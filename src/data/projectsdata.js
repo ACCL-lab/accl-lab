@@ -18,7 +18,7 @@ const projects = [
     status: "Completed",
     funding: "Funding: 29.6 Lakh",
     date: "Jan 2024 - Present",
-    report: "https://example.com/report1.pdf",
+    // report: "https://example.com/report1.pdf",
     // ✅ funding  Section
     fundingDetails: {
       amount: "Rs. 29,67,830 lakhs",
@@ -47,7 +47,7 @@ const projects = [
     report: "#",
     // ✅ funding  Section
     fundingDetails: {
-      amount: "Rs. 299 Lakh",
+      amount: "Rs. 3 Cr",
       role: "PI",
       agency: "Bhilai Steel Plant (BSP)",
       //scheme: "",
