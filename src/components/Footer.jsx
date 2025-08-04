@@ -20,7 +20,7 @@ export default function Footer({ handleOpen }) {
               <FaEnvelope className="me-2 text-danger" />
               <span>vishwesh@iitbhilai.ac.in</span><br />
               <FaPhoneAlt className="me-2 text-danger mt-2" />
-              <span>+91-771-1234567</span>
+              // <span>+91-771-1234567</span>
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function Footer({ handleOpen }) {
             className="text-white text-decoration-underline mx-1"
             target="_blank" rel="noreferrer"
           >
-            Kishan Tamboli
+            Kishan
           </a>
           | Maintained by ACCL Lab Team
           </p>
