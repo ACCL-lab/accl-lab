@@ -29,7 +29,7 @@ const ContactModal = ({ show, handleClose }) => {
               Room No - 401 A <br />
               Department of CSE<br />
               Engineering Building-1<br />
-              IIT Bhilai,Kutelabhata, Durg, Chhattisgarh - 491001
+              IIT Bhilai,Kutelabhata, Durg, Chhattisgarh - 491002
             </p>
           </div>
         </div>
