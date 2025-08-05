@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className="container">
         <a
           className="navbar-brand d-flex align-items-center"
-          href="https://accl-lab.github.io/accl-lab/#hero/"
+          href="https://accl-lab.github.io/accl-lab/#/#hero/"
         >
           <img src={accLogo} alt="ACCL Logo" width="55" height="55" className="rounded-circle me-2 zoomed-logo" />
           <span><strong>ACCL</strong></span>
