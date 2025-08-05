@@ -19,8 +19,6 @@ export default function Footer({ handleOpen }) {
             <p>
               <FaEnvelope className="me-2 text-danger" />
               <span>vishwesh@iitbhilai.ac.in</span><br />
-              <FaPhoneAlt className="me-2 text-danger mt-2" />
-              <span>+91-771-1234567</span>
             </p>
           </div>
 
