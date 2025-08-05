@@ -35,7 +35,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigation links with active class
+  // Navigation links
   const navLinks = [
     { name: 'Home', id: 'hero' },
     { name: 'About', id: 'about-section' },
@@ -47,26 +47,43 @@ const Navbar = () => {
     { name: 'Contact', id: 'contact' },
   ];
 
+  // Logo click handler - refresh page & go to #hero
+  const handleLogoClick = () => {
+    window.location.href = `${process.env.PUBLIC_URL}/#hero`;
+  };
+
   return (
     <nav
       id="mainNavbar"
       className={`navbar navbar-expand-lg custom-navbar fixed-top ${scrolled ? 'scrolled' : ''}`}
     >
       <div className="container">
-        <a
-          className="navbar-brand d-flex align-items-center"
-          href="/accl-lab/#hero"
-        >
-          <img src={accLogo} alt="ACCL Logo" width="55" height="55" className="rounded-circle me-2 zoomed-logo" />
-          <span><strong>ACCL</strong></span>
-        </a>
 
+        {/* ACCL logo with reload behavior */}
+        <div
+          className="navbar-brand d-flex align-items-center"
+          role="button"
+          onClick={handleLogoClick}
+          style={{ cursor: 'pointer' }}
+        >
+          <img
+            src={accLogo}
+            alt="ACCL Logo"
+            width="55"
+            height="55"
+            className="rounded-circle me-2 zoomed-logo"
+          />
+          <span><strong>ACCL</strong></span>
+        </div>
+
+        {/* Mobile IIT Bhilai logo */}
         <div className="d-flex align-items-center ms-auto d-lg-none">
           <a href="https://www.iitbhilai.ac.in" target="_blank" rel="noopener noreferrer">
             <img src={iitbhLogo} alt="IIT Bhilai Logo" style={{ height: '55px' }} />
           </a>
         </div>
 
+        {/* Toggler for mobile */}
         <button
           className="navbar-toggler"
           type="button"
@@ -79,6 +96,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Nav menu */}
         <div className="collapse navbar-collapse" id="navMenu">
           <ul className="navbar-nav ms-auto">
             {navLinks.map(link => (
@@ -92,6 +110,8 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+
+          {/* Desktop IIT Bhilai logo */}
           <div className="d-none d-lg-block ms-3">
             <a href="https://www.iitbhilai.ac.in" target="_blank" rel="noopener noreferrer">
               <img src={iitbhLogo} alt="IIT Bhilai Logo" style={{ height: '55px' }} />
