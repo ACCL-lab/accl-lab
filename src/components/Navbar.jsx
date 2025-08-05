@@ -53,10 +53,13 @@ const Navbar = () => {
       className={`navbar navbar-expand-lg custom-navbar fixed-top ${scrolled ? 'scrolled' : ''}`}
     >
       <div className="container">
-        <HashLink className="navbar-brand d-flex align-items-center" to="/#/#hero"> 
+        <a
+          className="navbar-brand d-flex align-items-center"
+          href="/accl-lab/#hero"
+        >
           <img src={accLogo} alt="ACCL Logo" width="55" height="55" className="rounded-circle me-2 zoomed-logo" />
           <span><strong>ACCL</strong></span>
-        </HashLink>
+        </a>
 
         <div className="d-flex align-items-center ms-auto d-lg-none">
           <a href="https://www.iitbhilai.ac.in" target="_blank" rel="noopener noreferrer">
