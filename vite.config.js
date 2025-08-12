@@ -15,3 +15,4 @@ export default defineConfig({
   base: '/accl-lab/',  // 👈 ADD THIS LINE
   plugins: [react()],
 })
+

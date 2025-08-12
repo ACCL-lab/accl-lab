@@ -59,7 +59,7 @@ const Navbar = () => {
           onClick={(e) => {
             e.preventDefault();
             const base = window.location.origin + window.location.pathname; 
-            window.location.href = `${base}#hero`; // reload & go to hero
+            window.location.href = `${base}`; // reload & go to hero
           }}
         >
           <img
