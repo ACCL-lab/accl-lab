@@ -58,7 +58,8 @@ const Navbar = () => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.location.href = "/#/#hero"; // reload & go to hero
+            const base = window.location.origin + window.location.pathname; 
+            window.location.href = `${base}#hero`; // reload & go to hero
           }}
         >
           <img
@@ -70,7 +71,6 @@ const Navbar = () => {
           />
           <span><strong>ACCL</strong></span>
         </a>
-
 
         <div className="d-flex align-items-center ms-auto d-lg-none">
           <a href="https://www.iitbhilai.ac.in" target="_blank" rel="noopener noreferrer">
