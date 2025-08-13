@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 
-// adjust to your fixed navbar height
-const NAV_HEIGHT = 80; 
+const NAV_HEIGHT = 80; // adjust to your navbar height
 
 export default function Autoscroll1({ pauseMs = 7000 }) {
   const timerRef = useRef(null);
@@ -17,28 +16,25 @@ export default function Autoscroll1({ pauseMs = 7000 }) {
   const getSections = () =>
     Array.from(document.querySelectorAll("section[id]"));
 
-  const goNext = () => {
-    const sections = getSections();
-    if (!sections.length) return;
-
-    indexRef.current = indexRef.current % sections.length;
-    const el = sections[indexRef.current];
-
-    // scroll accounting for fixed navbar
-    const top = el.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
-    window.scrollTo({ top, behavior: "smooth" });
-
-    indexRef.current = (indexRef.current + 1) % sections.length;
-    timerRef.current = setTimeout(goNext, pauseMs);
-  };
-
   useEffect(() => {
+    const goNext = () => {
+      const sections = getSections();
+      if (!sections.length) return;
+
+      indexRef.current = indexRef.current % sections.length;
+      const el = sections[indexRef.current];
+      const top = el.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
+      window.scrollTo({ top, behavior: "smooth" });
+
+      indexRef.current = (indexRef.current + 1) % sections.length;
+      timerRef.current = setTimeout(goNext, pauseMs);
+    };
+
     const start = () => {
       stop();
       const sections = getSections();
       if (!sections.length) return;
 
-      // start from the section currently near the top
       const y = window.pageYOffset + NAV_HEIGHT + 1;
       let current = 0;
       for (let i = 0; i < sections.length; i++) {
@@ -46,7 +42,6 @@ export default function Autoscroll1({ pauseMs = 7000 }) {
       }
       indexRef.current = (current + 1) % sections.length;
 
-      // small delay to let layout settle (esp. right after entering fullscreen)
       timerRef.current = setTimeout(goNext, 400);
     };
 
@@ -57,25 +52,25 @@ export default function Autoscroll1({ pauseMs = 7000 }) {
 
     document.addEventListener("fullscreenchange", onFullscreenChange);
 
-    // also allow manual forcing via ?autoscroll=1 (useful on TVs where fullscreen can't be detected)
-    if (new URL(window.location.href).searchParams.get("autoscroll") === "1") {
+    const forceParam = new URL(window.location.href).searchParams.get("autoscroll") === "1";
+    const isLargeScreen = window.matchMedia("(min-width: 1920px)").matches;
+
+    if (forceParam || isLargeScreen) {
       start();
     }
 
-    // stop if user interacts
-    const interrupt = () => stop();
-    window.addEventListener("wheel", interrupt, { passive: true });
-    window.addEventListener("keydown", interrupt);
-    window.addEventListener("touchstart", interrupt, { passive: true });
+    window.addEventListener("wheel", stop, { passive: true });
+    window.addEventListener("keydown", stop);
+    window.addEventListener("touchstart", stop, { passive: true });
 
     return () => {
       stop();
       document.removeEventListener("fullscreenchange", onFullscreenChange);
-      window.removeEventListener("wheel", interrupt);
-      window.removeEventListener("keydown", interrupt);
-      window.removeEventListener("touchstart", interrupt);
+      window.removeEventListener("wheel", stop);
+      window.removeEventListener("keydown", stop);
+      window.removeEventListener("touchstart", stop);
     };
   }, [pauseMs]);
 
-  return null; // no UI
+  return null;
 }

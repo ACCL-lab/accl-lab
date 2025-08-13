@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { HashLink } from 'react-router-hash-link';
 import '../styles/style.css';
 import labVideo from "../assets/videos/lab-bg3.mp4";
