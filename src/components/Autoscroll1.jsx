@@ -1,86 +1,81 @@
-import { useEffect, useRef, useState, useCallback, useMemo } from "react";
+import { useEffect, useRef } from "react";
 
-const AutoScroll = () => {
-  const sectionIds = useMemo(
-    () => [
-      "hero",
-      "about-section",
-      "news-section",
-      "research-section",
-      "publications",
-      "projects",
-      "team",
-      "contact"
-    ],
-    []
-  );
+// adjust to your fixed navbar height
+const NAV_HEIGHT = 80; 
 
-  const [index, setIndex] = useState(0);
-  const timeoutRef = useRef(null);
-  const userInteractedRef = useRef(false);
-  const resumeTimeoutRef = useRef(null);
+export default function Autoscroll1({ pauseMs = 7000 }) {
+  const timerRef = useRef(null);
+  const indexRef = useRef(0);
 
-  const scrollToSection = useCallback(
-    (idx) => {
-      const section = document.getElementById(sectionIds[idx]);
-      if (section) section.scrollIntoView({ behavior: "smooth" });
-    },
-    [sectionIds]
-  );
-
-  const startAutoScroll = useCallback(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % sectionIds.length);
-    }, 5000);
-  }, [sectionIds.length]);
-
-  const handleUserActivity = useCallback(() => {
-    userInteractedRef.current = true;
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
-    resumeTimeoutRef.current = setTimeout(() => {
-      userInteractedRef.current = false;
-      startAutoScroll();
-    }, 20000);
-  }, [startAutoScroll]);
-
-  const handleMouseEnter = useCallback(() => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    if (!userInteractedRef.current) startAutoScroll();
-  }, [startAutoScroll]);
-
-  useEffect(() => {
-    scrollToSection(index);
-    if (!userInteractedRef.current) {
-      startAutoScroll();
+  const stop = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
     }
-  }, [index, scrollToSection, startAutoScroll]);
+  };
+
+  const getSections = () =>
+    Array.from(document.querySelectorAll("section[id]"));
+
+  const goNext = () => {
+    const sections = getSections();
+    if (!sections.length) return;
+
+    indexRef.current = indexRef.current % sections.length;
+    const el = sections[indexRef.current];
+
+    // scroll accounting for fixed navbar
+    const top = el.getBoundingClientRect().top + window.pageYOffset - NAV_HEIGHT;
+    window.scrollTo({ top, behavior: "smooth" });
+
+    indexRef.current = (indexRef.current + 1) % sections.length;
+    timerRef.current = setTimeout(goNext, pauseMs);
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleUserActivity);
-    window.addEventListener("mousemove", handleUserActivity);
-    window.addEventListener("touchstart", handleUserActivity);
-    document.body.addEventListener("mouseenter", handleMouseEnter);
-    document.body.addEventListener("mouseleave", handleMouseLeave);
+    const start = () => {
+      stop();
+      const sections = getSections();
+      if (!sections.length) return;
 
-    startAutoScroll();
+      // start from the section currently near the top
+      const y = window.pageYOffset + NAV_HEIGHT + 1;
+      let current = 0;
+      for (let i = 0; i < sections.length; i++) {
+        if (y >= sections[i].offsetTop) current = i;
+      }
+      indexRef.current = (current + 1) % sections.length;
+
+      // small delay to let layout settle (esp. right after entering fullscreen)
+      timerRef.current = setTimeout(goNext, 400);
+    };
+
+    const onFullscreenChange = () => {
+      if (document.fullscreenElement) start();
+      else stop();
+    };
+
+    document.addEventListener("fullscreenchange", onFullscreenChange);
+
+    // also allow manual forcing via ?autoscroll=1 (useful on TVs where fullscreen can't be detected)
+    if (new URL(window.location.href).searchParams.get("autoscroll") === "1") {
+      start();
+    }
+
+    // stop if user interacts
+    const interrupt = () => stop();
+    window.addEventListener("wheel", interrupt, { passive: true });
+    window.addEventListener("keydown", interrupt);
+    window.addEventListener("touchstart", interrupt, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", handleUserActivity);
-      window.removeEventListener("mousemove", handleUserActivity);
-      window.removeEventListener("touchstart", handleUserActivity);
-      document.body.removeEventListener("mouseenter", handleMouseEnter);
-      document.body.removeEventListener("mouseleave", handleMouseLeave);
-      clearTimeout(timeoutRef.current);
-      clearTimeout(resumeTimeoutRef.current);
+      stop();
+      document.removeEventListener("fullscreenchange", onFullscreenChange);
+      window.removeEventListener("wheel", interrupt);
+      window.removeEventListener("keydown", interrupt);
+      window.removeEventListener("touchstart", interrupt);
     };
-  }, [handleUserActivity, handleMouseEnter, handleMouseLeave, startAutoScroll]);
+  }, [pauseMs]);
 
-  return null;
-};
-
-export default AutoScroll;
+  return null; // no UI
+}

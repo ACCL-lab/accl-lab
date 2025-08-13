@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashLink } from 'react-router-hash-link';
 import '../styles/style.css';
 import labVideo from "../assets/videos/lab-bg3.mp4";
@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 import ContactModal from '../components/ContactModal';
 
 // AutoScroll Component
-//import AutoScroll from "../components/Autoscroll1";
+import AutoScroll from "../components/Autoscroll1";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
@@ -24,9 +24,8 @@ const Home = () => {
 
   return (
     <>
-      {/* 🔁 Auto Scroll Handler 
-      <AutoScroll />*/}
-
+      {/* 🔁 Auto Scroll Handler*/ }
+      <AutoScroll />
 
       {/* Hero Section */}
       <section id="hero" className="hero-section py-5">
