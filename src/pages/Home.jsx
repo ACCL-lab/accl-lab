@@ -1,7 +1,8 @@
 import React, { useState} from "react";
 import { HashLink } from 'react-router-hash-link';
 import '../styles/style.css';
-import labVideo from "../assets/videos/lab-bg3.mp4";
+//import labVideo from "../assets/videos/lab-bg3.mp4";
+import labVideo from "../assets/videos/lab-bg2.mp4";
 
 // Section Components
 import About from './About';
@@ -35,7 +36,9 @@ const Home = () => {
         </video>
         <div className="interactive-lines"></div>
         <div className="hero-content">
-          <h1 className="display-4 fw-bold">Welcome to Accelerated Computing Lab</h1>
+          <h1 className="display-4 fw-bold">Welcome to Accelerated Computing Research Lab</h1>
+          {/*<p>to</p>
+          <h1 className="display-4 fw-bold">Accelerated Computing Research Lab</h1>*/}
           <p className="lead">Department of CSE, IIT BHILAI</p>
           <HashLink smooth to="#about-section" className="btn btn-primary mt-3">Explore More</HashLink>
         </div>

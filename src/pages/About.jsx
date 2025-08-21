@@ -9,7 +9,7 @@ const About = () => {
         <div className="col-lg-6 mb-4 pe-md-5" data-aos="fade-right">
           <h2 className="mb-3 page-header">About Our Lab</h2>
           <p>
-            The <span className="fw-semibold">Accelerated Computing Lab (ACCL)</span> is a premier research hub dedicated to advancing the frontiers of
+            The <span className="fw-semibold">Accelerated Computing Research Lab (ACCL)</span> is a premier research hub dedicated to advancing the frontiers of
             <span className="fw-semibold"> high-performance computing, graph analytics, machine learning, deep learning</span>, and
             <span className="fw-semibold"> GPU architecture optimization</span>. We strive to solve large-scale, real-world problems by building intelligent, scalable, and efficient systems for next-generation computing.
           </p>
