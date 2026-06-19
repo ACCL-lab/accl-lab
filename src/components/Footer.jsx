@@ -41,6 +41,11 @@ export default function Footer({ handleOpen }) {
                   Institute Profile
                 </a>
               </li>
+              <li>
+                <a href="https://github.com/ACCL-lab/accl-lab" target="_blank" rel="noreferrer" className="text-white text-decoration-none">
+                  GitHub
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -64,7 +69,7 @@ export default function Footer({ handleOpen }) {
         <div className="d-md-flex justify-content-between align-items-center text-center mt-2">
           {/* Left: Copyright */}
           <p className="mb-1 small mb-md-0">
-            © 2025 <strong>ACCL Lab</strong>. All Rights Reserved.
+            © 2026 <strong>ACCL Lab</strong>. All Rights Reserved.
           </p>
 
           {/* Right: Developed & Maintained Info */}

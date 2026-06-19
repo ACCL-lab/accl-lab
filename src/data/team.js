@@ -18,6 +18,9 @@ import amiteshImage from '../assets/images/team/amitesh.jpg';
 import karanImage from '../assets/images/team/karan.jpg';
 import apurvaImage from '../assets/images/team/apurva.jpg';
 import ranjithImage from '../assets/images/team/rajnith.jpg';
+import KushalImage from '../assets/images/team/kushal.jpg';
+import VanshikaImage from '../assets/images/team/VANSHIKA.png';
+import YashImage from '../assets/images/team/yash.jpeg';
 
 const teamData = {
   director: {
@@ -70,13 +73,13 @@ const teamData = {
       name: "Yash Raj Verma",
       role: "PhD-Scholar (2025-present)",
       email: "yashrajverma@iitbhilai.ac.in",
-      image: "src/assets/images/team/yash.jpeg",
-      // social: {
-      //   linkedin: "http://www.linkedin.com/in/kishan-tamboli-ab5b151a7",
-      //   github: "https://github.com/KishantLab",
-      //   scholar: "https://scholar.google.com/citations?user=MMktmk4AAAAJ&hl=en",
-      //   orcid: "https://orcid.org/0009-0005-3233-5029",
-      // },
+      image: YashImage ,
+      social: {
+        linkedin: "www.linkedin.com/in/yash-raj-verma-2107bb417",
+        github: "https://github.com/yashraj-sys10",
+        //scholar: "https://scholar.google.com/citations?user=MMktmk4AAAAJ&hl=en",
+        //orcid: "https://orcid.org/0009-0005-3233-5029",
+      },
     },
   ],
 
@@ -85,7 +88,7 @@ const teamData = {
       name: "Vanshika Srivastava",
       role: "M.Tech (2025-present)",
       email: "vanshikasri@iitbhilai.ac.in",
-      image: "src/assets/images/team/VANSHIKA.png",
+      image: VanshikaImage,
       social: {
         //github: "https://github.com/iamrupamroyy",
         linkedin: "https://www.linkedin.com/in/vanshika-srivastava-5b1876202?utm_source=share_via&utm_content=profile&utm_medium=member_android",
@@ -95,7 +98,7 @@ const teamData = {
       name: "Kushal Khachane",
       role: "M.Tech (2025-present)",
       email: "kushalkhachane@iitbhilai.ac.in",
-      image: "src/assets/images/team/kushal.jpg",
+      image: KushalImage,
       social: {
         github: "https://github.com/KushalKhachane6503",
         linkedin: "http://www.linkedin.com/in/kushal-khachane-b2898824a",
