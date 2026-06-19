@@ -66,49 +66,61 @@ const teamData = {
         orcid: "https://orcid.org/0009-0005-3233-5029",
       },
     },
+    {
+      name: "Yash Raj Verma",
+      role: "PhD-Scholar (2025-present)",
+      email: "yashrajverma@iitbhilai.ac.in",
+      image: "src/assets/images/team/yash.jpeg",
+      // social: {
+      //   linkedin: "http://www.linkedin.com/in/kishan-tamboli-ab5b151a7",
+      //   github: "https://github.com/KishantLab",
+      //   scholar: "https://scholar.google.com/citations?user=MMktmk4AAAAJ&hl=en",
+      //   orcid: "https://orcid.org/0009-0005-3233-5029",
+      // },
+    },
   ],
 
   mtech: [
     {
-      name: "Rupam Roy",
-      role: "M.Tech (2024-present)",
-      email: "rupamr@iitbhilai.ac.in",
-      image: rupamimage,
+      name: "Vanshika Srivastava",
+      role: "M.Tech (2025-present)",
+      email: "vanshikasri@iitbhilai.ac.in",
+      image: "src/assets/images/team/VANSHIKA.png",
       social: {
-        github: "https://github.com/iamrupamroyy",
-        linkedin: "https://www.linkedin.com/in/iamrupamroyy",
+        //github: "https://github.com/iamrupamroyy",
+        linkedin: "https://www.linkedin.com/in/vanshika-srivastava-5b1876202?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       },
     },
     {
-      name: "Aniket Mittal",
-      role: "M.Tech (2024-present)",
-      email: "aniketmitt@iitbhilai.ac.in",
-      image: aniketimage,
+      name: "Kushal Khachane",
+      role: "M.Tech (2025-present)",
+      email: "kushalkhachane@iitbhilai.ac.in",
+      image: "src/assets/images/team/kushal.jpg",
       social: {
-        github: "https://github.com/aniketmittal14",
-        linkedin: "https://www.linkedin.com/in/aniket-mittal-48ba20205",
+        github: "https://github.com/KushalKhachane6503",
+        linkedin: "http://www.linkedin.com/in/kushal-khachane-b2898824a",
       },
     },
-    {
-      name: "Gobardhan Meher",
-      role: "M.Tech (2024-present)",
-      email: "gobardhanm@iitbhilai.ac.in",
-      image: gobardhanimage,
-      social: {
-        github: "https://github.com/gobardhanm",
-        linkedin: "https://github.com/gobardhanm",
-      },
-    },
-    {
-      name: "Shrashank Maravi",
-      role: "M.Tech (2024-present)",
-      email: "shrashankm@iitbhilai.ac.in",
-      image: shrashankimage,
-      social: {
-        github: "https://github.com/Shrashank00",
-        linkedin: "https://www.linkedin.com/in/shrashank-maravi-45818b260",
-      },
-    },
+    // {
+    //   name: "Gobardhan Meher",
+    //   role: "M.Tech (2024-present)",
+    //   email: "gobardhanm@iitbhilai.ac.in",
+    //   image: gobardhanimage,
+    //   social: {
+    //     github: "https://github.com/gobardhanm",
+    //     linkedin: "https://github.com/gobardhanm",
+    //   },
+    // },
+    // {
+    //   name: "Shrashank Maravi",
+    //   role: "M.Tech (2024-present)",
+    //   email: "shrashankm@iitbhilai.ac.in",
+    //   image: shrashankimage,
+    //   social: {
+    //     github: "https://github.com/Shrashank00",
+    //     linkedin: "https://www.linkedin.com/in/shrashank-maravi-45818b260",
+    //   },
+    // },
     // Add more...
   ],
   /*
@@ -127,18 +139,18 @@ const teamData = {
     },
   ],
   */
-  btech: [
-    {
-      name: "Shivangi Gaur",
-      role: "B.Tech (2022-present)",
-      email: "shivangig@iitbhilai.ac.in",
-      image: shivangiImage,
-      social: {
-        github: "https://github.com/gaurshivangi",
-        linkedin: "https://www.linkedin.com/in/shivangi-gaur-633585260/",
-      },
-    },
-  ],
+  // btech: [
+  //   {
+  //     name: "Shivangi Gaur",
+  //     role: "B.Tech (2022-present)",
+  //     email: "shivangig@iitbhilai.ac.in",
+  //     image: shivangiImage,
+  //     social: {
+  //       github: "https://github.com/gaurshivangi",
+  //       linkedin: "https://www.linkedin.com/in/shivangi-gaur-633585260/",
+  //     },
+  //   },
+  // ],
   /*
   msc: [
     {
@@ -151,7 +163,7 @@ const teamData = {
       },
     },
   ],
-  */
+  
   interns: [
     {
       name: "A Vishal",
@@ -163,7 +175,8 @@ const teamData = {
         linkedin: "https://www.linkedin.com/in/a-vishal-899975291/",
       },
     },
-  ],
+    
+  ],*/
   past: [
     {
       name:"APURVA DOGRA",
@@ -231,7 +244,67 @@ const teamData = {
         github: "https://github.com/Karan-wab",
         linkedin: "https://www.linkedin.com/in/karan-dewangan-3a63992bb",
       },
-    }
+    },
+    {
+      name: "Rupam Roy",
+      role: "M.Tech (2024-2026)",
+      email: "rupamr@iitbhilai.ac.in",
+      image: rupamimage,
+      social: {
+        github: "https://github.com/iamrupamroyy",
+        linkedin: "https://www.linkedin.com/in/iamrupamroyy",
+      },
+    },
+    {
+      name: "Aniket Mittal",
+      role: "M.Tech (2024-2026 )",
+      email: "aniketmitt@iitbhilai.ac.in",
+      image: aniketimage,
+      social: {
+        github: "https://github.com/aniketmittal14",
+        linkedin: "https://www.linkedin.com/in/aniket-mittal-48ba20205",
+      },
+    },
+    {
+      name: "Gobardhan Meher",
+      role: "M.Tech (2024-2026)",
+      email: "gobardhanm@iitbhilai.ac.in",
+      image: gobardhanimage,
+      social: {
+        github: "https://github.com/gobardhanm",
+        linkedin: "https://github.com/gobardhanm",
+      },
+    },
+    {
+      name: "Shrashank Maravi",
+      role: "M.Tech (2024-2026)",
+      email: "shrashankm@iitbhilai.ac.in",
+      image: shrashankimage,
+      social: {
+        github: "https://github.com/Shrashank00",
+        linkedin: "https://www.linkedin.com/in/shrashank-maravi-45818b260",
+      },
+    },
+    {
+      name: "Shivangi Gaur",
+      role: "B.Tech (2022-2026)",
+      email: "shivangig@iitbhilai.ac.in",
+      image: shivangiImage,
+      social: {
+        github: "https://github.com/gaurshivangi",
+        linkedin: "https://www.linkedin.com/in/shivangi-gaur-633585260/",
+      },
+    },
+    {
+      name: "A Vishal",
+      role: "Web Dev Intern – BIT Durg",
+      email: "vishal0926@gmail.com",
+      image: vishalImage,
+      social: {
+        github: "https://github.com/avishxl",
+        linkedin: "https://www.linkedin.com/in/a-vishal-899975291/",
+      },
+    },
 
   ],
 };

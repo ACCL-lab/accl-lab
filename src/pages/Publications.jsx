@@ -3,7 +3,8 @@ import publications from '../data/publicationsData';
 import '../styles/style.css';
 
 const filterYear = (year) => {
-  if (year >= 2021) return '2021-present';
+  if (year >= 2026) return '2026-present';
+  if (year >= 2021) return '2021-2025';
   if (year >= 2016) return '2016-2020';
   if (year >= 2010) return '2010-2015';
   return 'unknown';
@@ -23,7 +24,7 @@ const Publications = () => {
         <h1 className="text-center mb-5 fw-bold">Publications</h1>
 
         <div className="text-center mb-4">
-          {['all', '2010-2015', '2016-2020', '2021-present'].map(year => (
+          {['all', '2010-2015', '2016-2020', '2021-2025', '2026-present'].map(year => (
             <button
               key={year}
               className={`btn btn-outline-primary mx-1 filter-btn ${

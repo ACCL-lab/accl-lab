@@ -10,6 +10,19 @@ const newsData = [
     // no link
   },
   {
+  title: "🎓 Congratulations to the Graduating Class of 2026!",
+  description: `We are proud to announce that the following students have successfully graduated in the 2026 academic session:
+    <b>
+    🎓 Rupam Roy – M.Tech\n
+    🎓 Aniket Mittal– M.Tech\n
+    🎓 Aniket Mittal – M.Tech\n
+    🎓 Shrashank Maravi – M.Tech\n
+    🎓 Shivangi Gaur – B.Tech
+    </b>
+    We congratulate them on their achievement and wish them the very best in their future endeavors!`,
+  },
+
+  {
   title: "🎓 Congratulations to the Graduating Class of 2025!",
   description: `We are proud to announce that the following students have successfully graduated in the 2025 academic session:
     <b>
