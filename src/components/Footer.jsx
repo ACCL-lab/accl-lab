@@ -42,7 +42,7 @@ export default function Footer({ handleOpen }) {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/ACCL-lab/accl-lab" target="_blank" rel="noreferrer" className="text-white text-decoration-none">
+                <a href="https://github.com/ACCL-lab" target="_blank" rel="noreferrer" className="text-white text-decoration-none">
                   GitHub
                 </a>
               </li>

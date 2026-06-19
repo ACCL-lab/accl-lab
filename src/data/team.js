@@ -21,6 +21,7 @@ import ranjithImage from '../assets/images/team/rajnith.jpg';
 import KushalImage from '../assets/images/team/kushal.jpg';
 import VanshikaImage from '../assets/images/team/VANSHIKA.png';
 import YashImage from '../assets/images/team/yash.jpeg';
+import SanoopImage from '../assets/images/team/sanoop.jpg';
 
 const teamData = {
   director: {
@@ -75,7 +76,7 @@ const teamData = {
       email: "yashrajverma@iitbhilai.ac.in",
       image: YashImage ,
       social: {
-        linkedin: "www.linkedin.com/in/yash-raj-verma-2107bb417",
+        linkedin: "http://www.linkedin.com/in/yash-raj-verma-2107bb417",
         github: "https://github.com/yashraj-sys10",
         //scholar: "https://scholar.google.com/citations?user=MMktmk4AAAAJ&hl=en",
         //orcid: "https://orcid.org/0009-0005-3233-5029",
@@ -104,16 +105,16 @@ const teamData = {
         linkedin: "http://www.linkedin.com/in/kushal-khachane-b2898824a",
       },
     },
-    // {
-    //   name: "Gobardhan Meher",
-    //   role: "M.Tech (2024-present)",
-    //   email: "gobardhanm@iitbhilai.ac.in",
-    //   image: gobardhanimage,
-    //   social: {
-    //     github: "https://github.com/gobardhanm",
-    //     linkedin: "https://github.com/gobardhanm",
-    //   },
-    // },
+    {
+      name: "Sanoop t v",
+      role: "M.Tech (2025-present)",
+      email: "sanooptv@iitbhilai.ac.in",
+      image: SanoopImage,
+      social: {
+        //github: "https://github.com/gobardhanm",
+        linkedin: "https://www.linkedin.com/in/sanoop-t-v-a24b2424a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      },
+    },
     // {
     //   name: "Shrashank Maravi",
     //   role: "M.Tech (2024-present)",
@@ -192,7 +193,7 @@ const teamData = {
     },
     {
       name: "Ranjith Vutnoor",
-      role: "M.Tech (2023-2025)",
+      role: "M.Tech (2021-2023)",
       email: "ranjithv@iitbhilai.ac.in", 
       image:ranjithImage,
       social: {
